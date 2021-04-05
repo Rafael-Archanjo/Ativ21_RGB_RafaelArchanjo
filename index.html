@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <title> RGB </title>
+    <meta charset="utf-8">
+    <meta name="author" content="Rafael A.">
+    <meta name="description" content="Lista de documentos">
+    <meta name="keywords" content="html5, tecnologia">
+
+    <style>
+        #view {
+            width: 100px;
+            height: 100px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div id="view"></div>
+
+    <div>
+        <span>Red: </span>
+        <input type="range" name="redcount" id="redcount" min="0" max="255" value="0" onchange="cor()"
+            oninput="this.nextElementSibling.value = this.value">
+        <output>0</output> <br>
+    </div>
+
+    <div>
+        <span>Green: </span>
+        <input type="range" name="greencount" id="greencount" min="0" max="255" value="0" onchange="cor()"
+            oninput="this.nextElementSibling.value = this.value">
+        <output>0</output> <br>
+    </div>
+
+    <div>
+        <span>Blue: </span>
+        <input type="range" name="bluecount" id="bluecount" min="0" max="255" value="0" onchange="cor()"
+            oninput="this.nextElementSibling.value = this.value">
+        <output>0</output> <br>
+    </div>
+
+    <div class="msg"></div>
+    <div class="msg1"></div>
+    <div class="msg2"></div>
+
+
+
+    <script>
+        window.addEventListener
+
+        function cor() {
+
+            let verm = document.querySelector("#redcount").value
+            let verd = document.querySelector("#greencount").value
+            let azul = document.querySelector("#bluecount").value
+
+            document.querySelector("#view").style.background = "rgb(" + verm + "," + verd + "," + azul + ")";
+
+            document.querySelector(".msg").innerHTML = "R = " + verm;
+            document.querySelector(".msg1").innerHTML = "G = " + verd;
+            document.querySelector(".msg2").innerHTML = "B = " + azul;
+
+        }
+
+    </script>
+
+
+
+
+
+</body>
+
+</html>
